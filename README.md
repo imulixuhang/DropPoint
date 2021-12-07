@@ -50,3 +50,7 @@
 # test
 - on local, when you using func start --built command and open in web browser, it will GET
 - on server, you need to choose one of the two functions and click "Code + Test" -> "Test/Run" -> POST or GET
+
+# git commanda
+git config --global user.name "Alex Li"
+git config --global user.email "imulixuhang@gmail.com"

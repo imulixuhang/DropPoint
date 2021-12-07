@@ -10,7 +10,6 @@ using Newtonsoft.Json;
 using Microsoft.WindowsAzure.Storage.Blob;
 using Microsoft.WindowsAzure.Storage;
 
-
 namespace BackendFunctions
 {
     public static class SceneryFunction
@@ -36,7 +35,6 @@ namespace BackendFunctions
             CloudBlockBlob blob = container.GetBlockBlobReference($"{fileName}");
             blob.Properties.ContentType = "application/json";
 
-
             if (req.Method == "POST")
             {
                 string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
@@ -47,7 +45,6 @@ namespace BackendFunctions
             // otherwise, drop through to a default "GET" behaviour
             string currentSceneryJson = await blob.DownloadTextAsync();
             return (ActionResult)new OkObjectResult(currentSceneryJson);
-
         }
     }
 }

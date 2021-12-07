@@ -14,7 +14,6 @@ namespace BackendFunctions
 {
     public static class SpatialAnchorFunction
     {
-
         [FunctionName("SpatialAnchor")]
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req,
@@ -35,6 +34,7 @@ namespace BackendFunctions
             // Connect to the blob file
             CloudBlockBlob blob = container.GetBlockBlobReference($"{fileName}");
             blob.Properties.ContentType = "application/json";
+            
             if (req.Method == "POST")
             {
                 string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
