@@ -52,5 +52,8 @@
 - on server, you need to choose one of the two functions and click "Code + Test" -> "Test/Run" -> POST or GET
 
 # git commanda
-git config --global user.name "Alex Li"
-git config --global user.email "imulixuhang@gmail.com"
+- git config --global user.name "Alex Li"
+- git config --global user.email "imulixuhang@gmail.com"
+
+# reference
+- https://blogs.siliconorchid.com/post/coding-inspiration/unity-ar-spatialanchors/part9-cloud-backend/
